@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-lg-3"></div>
+  <div class="col-lg-6 bg">
+
+    <h1 class="header"><i class="fa fa-film"></i> P V R <i class="fa fa-film"></i></h1>
+    <h2 class="header2">  Movie Name: {{movieName}}</h2>
+      
+    <h2 class="tickets"> <i class="fa fa-ticket"></i> Tickets Available:{{avltickets}}</h2>
+    <p>Note : booking button will disable at 100</p>
+    <div class="row">
+      <div class="col-lg-6">  <button class="btn btn-danger form-control" (click)="cancel()">cancel tickets</button>
+       </div>
+       <div class="col-lg-6"> 
+         <button class="btn btn-success form-control" [disabled]="avltickets==100" (click)="book()">book tickets</button></div>
+    </div>
+  
+    
+
+
+  </div>
+  <div class="col-lg-3"></div>
+</div>
+ 
+
+
+
+<router-outlet></router-outlet>
